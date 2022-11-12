@@ -32,9 +32,8 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
-                <!--Sign In-->
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                <!--Sign In Navigation-->
+                <span class="navbar-text" id="loginButton">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>    
@@ -91,10 +90,10 @@
                 <!--Reserve Table Button-->
                 <div class="col-12 col-sm align-items-center">
                     <a role="button" class="btn btn-block nav-link btn-warning"
-                            data-toggle="modal" data-target="#reserveTableModal"> Reserve Table</a>
+                            id="reservetableButton"> Reserve Table</a>
                 </div>
                 <!--Reserve Table Modal-->
-                <div id="reserveTableModal" class="modal fade" role="dialog">
+                <div id="reservetableModal" class="modal fade" role="dialog">
                     <div class="modal-dialog modal-lg" role="content">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -292,7 +291,7 @@
                                 <label class="form-check-label" for="radio2"></label>
                               </div>
                               <div class="form-check">
-                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3" checked>3
+                                <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3" >3
                                 <label class="form-check-label" for="radio3"></label>
                               </div>
                               <div class="form-check">
@@ -300,7 +299,7 @@
                                 <label class="form-check-label" for="radio4"></label>
                               </div>
                               <div class="form-check">
-                                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5" checked>5
+                                <input type="radio" class="form-check-input" id="radio5" name="optradio" value="option5">5
                                 <label class="form-check-label" for="radio5"></label>
                               </div>
                               <div class="form-check">
@@ -389,9 +388,17 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
-            });
+        });
+        $("#loginButton").click(function() {
+            $("#loginModal").modal('show');
+        })
+
+        $("#reservetableButton").click(function() {
+            $("#reservetableModal").modal('toggle');
+        })
     });
 </script>
+
 </body>
 
 </html>

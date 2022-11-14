@@ -283,7 +283,7 @@
                         <div class="form-group row">
                             <label for="Numbers of Guest" class="col-sm-3 col-form-label">Number of Guest</label>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>1
+                                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">1
                                 <label class="form-check-label" for="radio1"></label>
                               </div>
                               <div class="form-check">
@@ -374,30 +374,7 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#mycarousel').carousel({ interval: 2000});
-        $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-        });
-        $("#loginButton").click(function() {
-            $("#loginModal").modal('show');
-        })
-
-        $("#reservetableButton").click(function() {
-            $("#reservetableModal").modal('toggle');
-        })
-    });
-</script>
+<script src="js/scripts.js"></script>
 
 </body>
 
